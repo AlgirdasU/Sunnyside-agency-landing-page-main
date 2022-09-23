@@ -1,7 +1,6 @@
 .testimonials {
   max-width: 120rem;
   margin: 18rem auto 18rem;
-  
 
   &__heading-fourth {
     text-align: center;
@@ -14,7 +13,7 @@
   }
 
   &__container {
-       display: grid;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     justify-items: center;
     column-gap: 3rem;
@@ -30,6 +29,7 @@
 
   &__img {
     width: 8rem;
+    height: 8rem;
     border-radius: 50%;
     margin-bottom: 6rem;
   }

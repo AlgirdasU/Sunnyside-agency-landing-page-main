@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://github.com/AlgirdasU/Sunnyside-agency-landing-page-main)
-- Live Site URL: (https://sparkling-daifuku-a1fb37.netlify.app/)
+- Live Site URL: (https://deft-conkies-58b436.netlify.app/)
 
 ## My process
 
@@ -48,8 +48,8 @@ Users should be able to:
 
 ### What I learned
 
-How to use CSS clip-path, I put link below where you can try to practice. It helped me create a background of a specific shape for mobile menu. I've used very minimal animation.
-Also how to smoothly move to the next section. Just click white arrow.:) This code you can find in to JS file or just look the code below.
+How to use CSS clip-path, I put link below where you can try to practice. It helped me create a background of a specific shape for mobile menu. I've used minimal animation.
+How to smoothly move to the next section by clicking white arrow. This code you can find in to JS file or just look the code below. Also I added a scale effect on to the images.:) 
 
 ```html
 <a href="#section-2" class="hero__arrow-down-box">
