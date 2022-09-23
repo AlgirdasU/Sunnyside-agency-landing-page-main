@@ -1,0 +1,14 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  justify-items: center;
+
+  &__box {
+    max-width: 720rem;
+  }
+
+  &__gl-img {
+    max-width: 100%;
+    height: auto;
+  }
+}

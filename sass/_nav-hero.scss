@@ -1,0 +1,139 @@
+.header {
+  display: flex;
+  align-items: center;
+  margin: 0 4.4rem;
+  height: 12rem;
+  position: relative;
+  z-index: 999;
+
+  &__logo-box {
+    height: 3.5rem;
+    width: 18rem;
+    margin-right: auto;
+  }
+
+  &__logo {
+    height: 100%;
+    width: 100%;
+    color: var(--white);
+  }
+}
+
+.nav {
+  &__list {
+    font-size: var(--font-size-body);
+    font-family: var(--font-barlow);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5vh;
+  }
+
+  &__link {
+    color: var(--light-blue-font);
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      background-color: var(--light-blue-font);
+      height: 0.3rem;
+      width: 100%;
+      border-radius: 1rem;
+      position: absolute;
+      bottom: -0.5rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s;
+    }
+
+    &:hover:before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__link-cnt {
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: -0.05rem;
+    font-size: 1.6rem;
+    font-weight: var(--font-weight-fraunces-900);
+    border-radius: 5rem;
+    padding: 1.4rem 2.6rem;
+    font-family: var(--font-fraunces);
+    color: var(--very-dark-desaturated-blue);
+    transition: all 0.2s;
+
+    &:hover {
+      color: var(--light-blue-font);
+      background-color: var(--light-blue-bg-cn);
+    }
+  }
+}
+
+.hero {
+  max-width: 144rem;
+  max-height: 100%;
+  position: relative;
+
+  &__header-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  &__heading-primary {
+    text-align: center;
+    white-space: nowrap;
+
+    font-size: 5.5rem;
+    font-weight: var(--font-weight-fraunces-900);
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__arrow-down-box {
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: -1.8rem;
+    animation: 2s linear infinite alternate moveInDown;
+    cursor: pointer;
+  }
+}
+
+/* Mobile */
+.btn-mobile-nav {
+  background: none;
+  display: none;
+  border: none;
+  cursor: pointer;
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  &__icon--open {
+    // display: none;
+  }
+
+  &__icon--close {
+    display: none;
+  }
+}

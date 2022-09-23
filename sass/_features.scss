@@ -1,0 +1,133 @@
+.feature {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+  grid-template-rows: min-content;
+
+  &__img-text-box {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(3rem, 1fr));
+    grid-template-rows: 1fr minmax(12rem, 22rem);
+    align-content: flex-start;
+  }
+
+  &__ft-text-box {
+    justify-self: center;
+    align-self: center;
+    max-width: 44rem;
+    margin: 4rem;
+
+    &--center {
+      text-align: center;
+      grid-row: 2 / 3;
+      grid-column: 3 / 9;
+      margin: 0;
+      align-self: flex-start;
+    }
+  }
+
+  &__ft-heading-secondary {
+    color: var(--very-dark-desaturated-blue);
+    font-size: 4rem;
+    font-weight: var(--font-weight-fraunces-900);
+    line-height: 1.16;
+    margin-bottom: 3.6rem;
+  }
+
+  &__ft-heading-tertiary {
+    font-size: 2.8rem;
+    font-weight: var(--font-weight-fraunces-900);
+    margin-bottom: 2.6rem;
+
+    &--gr {
+      color: var(--dark-green);
+    }
+
+    &--bl {
+      color: var(--dark-blue);
+    }
+  }
+
+  &__ft-text {
+    color: var(--dark-grayish-blue);
+    letter-spacing: -0.02rem;
+    line-height: 1.8;
+    margin-bottom: 3.2rem;
+
+    &--gr {
+      color: var(--dark-green-paragraph);
+    }
+
+    &--bl {
+      color: var(--dark-blue-paragraph);
+    }
+  }
+
+  &__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--font-fraunces);
+    font-weight: var(--font-weight-fraunces-900);
+    color: var(--very-dark-desaturated-blue);
+    position: relative;
+    z-index: 1;
+
+    @mixin btn-hover {
+      content: "";
+      position: absolute;
+      width: 110%;
+      height: 1rem;
+      border-radius: 0.5rem;
+      bottom: -0.25rem;
+      left: -5%;
+      transform-origin: center;
+      transition: all 0.2s;
+      z-index: -1;
+    }
+
+    &--1 {
+      position: relative;
+      &::before {
+        background-color: var(--light-yellow-btn-hover);
+        @include btn-hover;
+      }
+
+      &:hover::before {
+        background-color: var(--yellow-btn-hover);
+      }
+    }
+
+    &--2 {
+      position: relative;
+      &::before {
+        @include btn-hover;
+        background-color: var(--light-pink-btn-hover);
+      }
+
+      &:hover::before {
+        background-color: var(--pink-btn-hover);
+      }
+    }
+  }
+
+  &__img-box {
+    max-width: max-content;
+
+    &--1 {
+      grid-column: 1 / -1;
+      grid-row: 1 / 3;
+    }
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  &__ft-img {
+    max-width: 100%;
+  }
+}
+
+::selection {
+  color: var(--white);
+  background: rgb(82, 168, 226);
+}

@@ -5,25 +5,43 @@
   --yellow: hsl(51, 100%, 49%);
   --dark-desaturated-cyan: hsl(167, 40%, 24%); // (graphic design text)
   --dark-blue: hsl(198, 62%, 26%); //  (photography text)
-  --dark-moderate-cyan: hsl(168, 34%, 41%); // (footer)
+  --dark-moderate-cyan: rgb(69, 140, 126); // (footer)
+  --footer-logo: rgb(45, 116, 100);
+  --footer-background: rgb(144, 212, 197);
 
-  // Neutral
+  // Neutral font
   --very-dark-desaturated-blue: hsl(212, 27%, 19%);
   --very-dark-grayish-blue: hsl(213, 9%, 39%);
-  --dark-grayish-blue: hsl(232, 10%, 55%);
-  --grayish-blue: hsl(210, 4%, 67%);
+  --dark-green: rgb(30, 77, 67);
+  --dark-green-paragraph: rgb(22, 78, 65);
+  --dark-blue: rgb(26, 83, 110);
+  --dark-blue-paragraph: rgb(7, 70, 108);
+  --dark-grayish-blue: rgb(129, 132, 152);
+  --testimonial-paragraph: rgb(99, 102, 122);
+  --grayish-blue: rgb(167, 171, 174);
   --white: hsl(0, 0%, 100%);
 
+  --light-yellow-btn-hover: rgb(255, 243, 187);
+  --yellow-btn-hover: rgb(248, 212, 0);
+
+  --light-pink-btn-hover: rgb(250, 214, 210);
+  --pink-btn-hover: rgb(242, 105, 95);
+  // NAV
+  --light-blue-bg-cn: rgb(111, 207, 255);
+  --focus-blue: rgb(6, 172, 255);
+
+  // Nav font color
+  --light-blue-font: rgb(235, 255, 255);
+
   // Typography
-  // Body Copy
   --font-size-body: 1.8rem;
 
   // Font
   --font-barlow: "Barlow", sans-serif;
   --font-weight-barlow: 600;
-  --font-fraunces: "fraunces", sans-serif;
-  --font-weight-frances-700: 700;
-  --font-weight-frances-900: 900;
+  --font-fraunces: "Fraunces", sans-serif;
+  --font-weight-fraunces-700: 700;
+  --font-weight-fraunces-900: 900;
 }
 
 *,
@@ -36,9 +54,45 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5;
+  font-size: 62.5%;
 }
+
 body {
   font-size: var(--font-size-body);
   line-height: 1.6;
+  // overflow-x: hidden;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-fraunces);
+}
+
+p,
+blockquote {
+  font-family: var(--font-barlow);
+  font-size: 1.8rem;
+}
+main {
+  margin-top: -12rem;
+}
+
+img {
+  display: block;
+}
+
+*:focus {
+  padding: 0.2rem;
+  width: fit-content;
+  outline: none;
+  box-shadow: 0 0 0 0.3rem var(--focus-blue);
+  border-radius: 0.1rem;
 }
